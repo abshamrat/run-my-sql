@@ -1,14 +1,22 @@
 {
   "name": "run-my-sql",
   "version": "1.0.0",
-  "description": "",
+  "description": "A tools to perform different actions over the MySql. You can fresh/truncate your database safely using very simple command or you can import the api to your project. It has on the fly sql running capabilites.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "runMySQL": "node ./src/runMySQL"
   },
-  "keywords": [],
-  "author": "",
+  "engines": {
+    "node": "8.x",
+    "npm": "5.7.x"
+  },
+  "files": [
+    "scripts",
+    "src"
+  ],
+  "keywords": ["sql"],
+  "author": "Abu Bakar Siddique Shamrat",
   "license": "ISC",
   "dependencies": {
     "commander": "^2.20.0",
