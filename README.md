@@ -19,6 +19,21 @@ i.e
 ```sh
 runMySql --fresh --seedFile ./schema.sql --user=root --password=root --database=my_db
 ```
+Api level usage
+```js
+const {runMySql} = require('../index');
+
+runMySql({
+    type: 'fresh',
+    options: {
+        seedFile: `${__dirname}/../data/dump.sql`
+    }
+}).then((res) => {
+    console.log(res);
+}).catch((err) => {
+    console.log(err);
+});
+```
 ### Options
 --host [optional] The hostname of the database you are connecting to.
 --port [optional] The port number to connect to.
