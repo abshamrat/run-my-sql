@@ -9,4 +9,17 @@ describe('Test the available api', () => {
             }
         });
     });
+    test('Truncate DB', () => {
+        const result = runMySql({
+            type: 'truncate'
+        });
+    });
+    test('Execute sql', () => {
+        const result = runMySql({
+            type: 'execSql',
+            options: {
+                seedFile: `${__dirname}/../data/dummy.sql`
+            }
+        });
+    });
 })
